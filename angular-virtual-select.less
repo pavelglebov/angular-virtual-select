@@ -1,0 +1,36 @@
+.virtual-select.ui-select-container {
+	position: relative;
+	z-index: auto;
+
+	.ui-select-search {
+		.flex-1();
+		min-width: 70px;
+		margin-left: 12px;
+	}
+
+	.ui-select-choices-group {
+		overflow: auto;
+		max-height: 200px;
+	}
+
+	.ui-select-choices.ui-select-dropdown {
+		overflow: hidden;
+		width: 100%;
+	}
+
+	.ui-select-match {
+		.flex-row();
+		flex-wrap: wrap;
+	}
+
+	.virtual-scroll-list-item {
+		white-space: nowrap !important;
+		min-height: 30px;
+	}
+}
+
+.virtual-select.ui-select-container.ui-select-multiple.ui-select-bootstrap .virtual-select-list-container {
+	display: block;
+	top: 100%;
+	margin-top: 0;
+}

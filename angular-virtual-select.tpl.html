@@ -1,0 +1,24 @@
+<div class="virtual-select ui-select-container ui-select-multiple ui-select-bootstrap">
+	<div class="ui-select-match">
+
+		<span ng-repeat="item in selected track by $index">
+			<span class="ui-select-match-item btn btn-default btn-xs">
+				<span class="close ui-select-match-close" ng-click="removeItem(item)">&nbsp;&times;</span>
+				<span>{{display(item)}}</span>
+			</span>
+		</span>
+
+		<input type="text" class="ui-select-search" ng-model="searchText" ng-click="activate()" placeholder="{{ selected.length ? '' : placeholder | i18n }}">
+	</div>
+	<ul ng-if="opened && list.length" class="virtual-select-list-container ui-select-choices ui-select-choices-content ui-select-dropdown dropdown-menu">
+		<li class="virtual-scroll-container ui-select-choices-group" vs-repeat>
+			<div class="ui-select-choices-row" ng-repeat="choice in list | filterSelected:choice:selected" ng-click="itemClick(choice)">
+				<a class="virtual-scroll-list-item ui-select-choices-row-inner"> <!-- ui-select layout -->
+					<span>
+						{{display(choice)}}
+					</span>
+				</a>
+			</div>
+		</li>
+	</ul>
+</div>

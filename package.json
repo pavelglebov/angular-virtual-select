@@ -1,0 +1,19 @@
+{
+  "name": "virtualselect",
+  "version": "1.0.0",
+  "description": "Select with virtualization with bootstrap-like behavior",
+  "main": "virtualSelect.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pavelglebov/virtualSelect.git"
+  },
+  "author": "Pavel Glebov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pavelglebov/virtualSelect/issues"
+  },
+  "homepage": "https://github.com/pavelglebov/virtualSelect#readme"
+}
