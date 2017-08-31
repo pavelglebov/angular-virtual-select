@@ -1,8 +1,14 @@
 {
   "name": "virtualselect",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Select with virtualization with bootstrap-like behavior",
   "main": "virtualSelect.js",
+  "dependencies": {
+    "angular-vs-repeat": "*",
+    "underscore": "*",
+    "less": "*",
+    "bootstrap": "*"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
