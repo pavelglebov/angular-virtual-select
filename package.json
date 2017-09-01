@@ -2,7 +2,7 @@
 	"name": "virtualselect",
 	"version": "1.0.1",
 	"description": "Select with virtualization with bootstrap-like behavior",
-	"main": "virtualSelect.js",
+	"main": "angular-virtual-select.js",
 	"dependencies": {
 		"angular-vs-repeat": "1.1.7",
 		"underscore": "1.8.3",
@@ -16,12 +16,12 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/pavelglebov/virtualSelect.git"
+		"url": "git+https://github.com/pavelglebov/angular-virtual-select.git"
 	},
 	"author": "Pavel Glebov",
 	"license": "ISC",
 	"bugs": {
-		"url": "https://github.com/pavelglebov/virtualSelect/issues"
+		"url": "https://github.com/pavelglebov/angular-virtual-select/issues"
 	},
-	"homepage": "https://github.com/pavelglebov/virtualSelect#readme"
+	"homepage": "https://github.com/pavelglebov/angular-virtual-select#readme"
 }
