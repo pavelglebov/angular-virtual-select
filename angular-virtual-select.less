@@ -1,9 +1,12 @@
+.virtual-select{
+	position: relative;
+}
 .virtual-select.ui-select-container {
 	position: relative;
 	z-index: auto;
 
 	.ui-select-search {
-		.flex-1();
+		flex: 1;
 		min-width: 70px;
 		margin-left: 12px;
 	}
@@ -19,7 +22,8 @@
 	}
 
 	.ui-select-match {
-		.flex-row();
+		display: flex;
+		flex-direction: row;
 		flex-wrap: wrap;
 	}
 
