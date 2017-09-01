@@ -1,6 +1,6 @@
 {
-	"name": "virtualselect",
-	"version": "1.0.1",
+	"name": "angular-virtual-select",
+	"version": "1.0.2",
 	"description": "Select with virtualization with bootstrap-like behavior",
 	"main": "angular-virtual-select.js",
 	"dependencies": {
@@ -10,9 +10,6 @@
 	},
 	"devDependencies": {
 		"less": "2.7.3"
-	},
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"repository": {
 		"type": "git",
