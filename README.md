@@ -1,4 +1,4 @@
-# Virtual-select
+# Angular-virtual-select
 
 Select with virtualization with bootstrap-like behavior
 
@@ -13,13 +13,13 @@ Select has a few dependencies, these are as follows, and must be included before
 
 You can install through npm:
 ```
-npm install virtual-select --save
+npm install angular-virtual-select --save
 ```
 
 You will then need to include the JS and CSS files for the plugin:
 ```
-<link href="node_modules/virtual-select/dist/angular-virtual-select.min.css" rel="stylesheet">
-<script src="node_modules/virtual-select/dist/angular-virtual-select.js.min.js"></script>
+<link href="node_modules/angular-virtual-select/dist/angular-virtual-select.min.css" rel="stylesheet">
+<script src="node_modules/angular-virtual-select/dist/angular-virtual-select.js.min.js"></script>
 ```
 
 And finally add the module dependency in your AngularJS app (you can remove ui.bootstrap if you don't want the extra dependency - it is only required for collapse animations and tooltips):
