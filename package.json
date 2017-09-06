@@ -1,32 +1,29 @@
 {
-  "name": "virtualselect",
-  "version": "1.0.1",
-  "description": "Select with virtualization with bootstrap-like behavior",
-  "main": "virtualSelect.js",
-  "dependencies": {
-    "angular-vs-repeat": "*",
-    "bootstrap": "*",
-    "underscore": "*"
-  },
-  "devDependencies": {
+	"name": "angular-virtual-select",
+	"version": "1.0.2",
+	"description": "Select with virtualization with bootstrap-like behavior",
+	"main": "angular-virtual-select.js",
+	"dependencies": {
+		"angular-vs-repeat": "1.1.7",
+		"underscore": "1.8.3",
+		"bootstrap": "*"
+	},
+	"devDependencies": {
     "gulp": "^3.9.1",
     "gulp-cssmin": "^0.2.0",
     "gulp-jsmin": "^0.1.5",
     "gulp-less": "^3.3.2",
     "gulp-rename": "^1.2.2",
-    "less": "*"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/pavelglebov/virtualSelect.git"
-  },
-  "author": "Pavel Glebov",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/pavelglebov/virtualSelect/issues"
-  },
-  "homepage": "https://github.com/pavelglebov/virtualSelect#readme"
+		"less": "2.7.3"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/pavelglebov/angular-virtual-select.git"
+	},
+	"author": "Pavel Glebov",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/pavelglebov/angular-virtual-select/issues"
+	},
+	"homepage": "https://github.com/pavelglebov/angular-virtual-select#readme"
 }
