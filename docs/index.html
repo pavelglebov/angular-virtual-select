@@ -5,15 +5,35 @@
         <title>Title</title>
         <link rel="stylesheet" type="text/css" href="./app/angular-virtual-select/angular-virtual-select.css">
         <link rel="stylesheet" type="text/css" href="./bower_components/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="./bower_components/angular-ui-select/dist/select.css">
     </head>
     <body>
-        <div ng-app="myApp" ng-controller="MainController">
-            {{test}}
+        <div ng-app="myApp" ng-controller="MainController" class="row">
+            <div class="col-lg-6 col-sm-12">
+                <virtual-select class="form-control" placeholder="'Select'"
+                                ng-model="selectedItem1"
+                                choices-repeat="items"
+                                display-property="'name'"
+                                core-property="'id'"
+                                multiselect>
+                </virtual-select>
+            </div>
+            <div class="col-lg-6 col-sm-12">
+                <ui-select ng-model="selectedItem1">
+                    <ui-select-match>
+                        <span ng-bind="$select.selected.name"></span>
+                    </ui-select-match>
+                    <ui-select-choices repeat="item in items track by item.id">
+                        <span ng-bind="item.name"></span>
+                    </ui-select-choices>
+                </ui-select>
+            </div>
         </div>
         <script src="./bower_components/jquery/dist/jquery.js"></script>
         <script src="./bower_components/angular/angular.js"></script>
         <script src="./bower_components/underscore/underscore-min.js"></script>
         <script src="./bower_components/angular-vs-repeat/src/angular-vs-repeat.js"></script>
+        <script src="./bower_components/angular-ui-select/dist/select.js"></script>
         <script src="./app/app.js"></script>
         <script src="./app/angular-virtual-select/angular-virtual-select.js"></script>
     </body>
