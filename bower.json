@@ -1,0 +1,13 @@
+{
+  "name": "angular-virtual-select",
+  "description": "Select with virtualization with bootstrap-like behavior",
+  "version": "1.0.2",
+  "homepage": "git+https://github.com/pavelglebov/angular-virtual-select.git",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "~1.6.6",
+    "bootstrap": "^3.3.7",
+    "underscore": "^1.8.3",
+    "angular-vs-repeat": "^1.1.7"
+  }
+}
