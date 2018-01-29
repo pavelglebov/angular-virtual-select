@@ -6,9 +6,9 @@
   "dependencies": {
     "angular-vs-repeat": "1.1.7",
     "bootstrap": "*",
-    "bootstrap-multiselect": "^0.9.13-1",
+    "angular-ui-select": "*",
     "jquery": "*",
-    "underscore": "1.8.3"
+    "underscore": "*"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
