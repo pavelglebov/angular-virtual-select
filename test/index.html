@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="TestApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Test Angular Virtual Select</title>
+	<script src="../node_modules/angular/angular.js"></script>
+	<script src="../node_modules/jquery/dist/jquery.js"></script>
+	<script src="../node_modules/underscore/underscore.js"></script>
+	<script src="../node_modules/angular-vs-repeat/src/angular-vs-repeat.js"></script>
+	<script src="../dist/angular-virtual-select.js"></script>
+	<script src="app.js"></script>
+</head>
+<body ng-controller="TestAppController as app">
+	<virtual-select choices-repeat="app.list"></virtual-select>
+</body>
+</html>

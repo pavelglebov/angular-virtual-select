@@ -1,6 +1,3 @@
-.virtual-select {
-  position: relative;
-}
 .virtual-select.ui-select-container {
   position: relative;
   z-index: auto;

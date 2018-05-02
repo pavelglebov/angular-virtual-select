@@ -1,3 +1,5 @@
+import "./angular-virtual-select.less";
+
 (function(window, angular, $, _) {
 	'use strict';
 
