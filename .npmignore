@@ -1,4 +1,6 @@
 src
 node_modules
 .gitignore
-gulpfile.js
+test
+webpack.dev.js
+webpack.build.js
