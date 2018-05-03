@@ -28,7 +28,7 @@ import "./angular-virtual-select.less";
 				template: `<div class="virtual-select ui-select-container ui-select-multiple ui-select-bootstrap">
 						<div class="ui-select-match">
 							<span ng-repeat="item in selected track by $index">
-								<span class="ui-select-match-item btn btn-default btn-xs">
+								<span class="ui-select-match-item btn btn-primary btn-xs btn-sm">
 									<span class="close ui-select-match-close" ng-click="removeItem(item)">&nbsp;&times;</span>
 									<span>{{display(item)}}</span>
 								</span>
@@ -37,7 +37,7 @@ import "./angular-virtual-select.less";
 						</div>
 						<ul ng-if="opened && list.length" class="virtual-select-list-container ui-select-choices ui-select-choices-content ui-select-dropdown dropdown-menu">
 							<li class="virtual-scroll-container ui-select-choices-group" vs-repeat>
-								<div class="ui-select-choices-row" ng-repeat="choice in list | virtualSelectfilterSelected:choice:selected track by $index" ng-click="itemClick(choice)">
+								<div class="ui-select-choices-row btn-sm" ng-repeat="choice in list | virtualSelectfilterSelected:choice:selected track by $index" ng-click="itemClick(choice)">
 									<a class="virtual-scroll-list-item ui-select-choices-row-inner"> <!-- ui-select layout -->
 										<span>
 											{{display(choice)}}

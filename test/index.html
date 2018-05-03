@@ -4,14 +4,11 @@
 	<meta charset="UTF-8">
 	<title></title>
 	<title><%= htmlWebpackPlugin.options.title %></title>
-	<% for (var css in htmlWebpackPlugin.files.css) { %>
-	<link href="<%= htmlWebpackPlugin.files.css[css] %>" rel="stylesheet">
-	<% } %>
-	<% for (var js in htmlWebpackPlugin.files.js) { %>
-	 	<script src="<%= htmlWebpackPlugin.files.js[js] %>"></script>
-	<% } %>
 </head>
 <body ng-controller="TestAppController as app">
-	<virtual-select choices-repeat="app.list"></virtual-select>
+	Selected: 
+	<span ng-repeat="item in selected">{{item}}</span>
+	<hr>
+	<virtual-select choices-repeat="app.list" ng-model="selected"></virtual-select>
 </body>
 </html>

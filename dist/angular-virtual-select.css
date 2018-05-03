@@ -1,11 +1,18 @@
 .virtual-select.ui-select-container {
   position: relative;
   z-index: auto;
+  display: flex;
+  border: 1px solid rgba(0, 0, 0, 0.15);
 }
 .virtual-select.ui-select-container .ui-select-search {
   flex: 1;
   min-width: 70px;
   margin-left: 12px;
+  background-color: transparent !important;
+  border: none;
+  outline: none;
+  height: 1.666666em;
+  margin-bottom: 3px;
 }
 .virtual-select.ui-select-container .ui-select-choices-group {
   overflow: auto;
@@ -19,13 +26,37 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  flex: 1;
+  overflow: auto;
+  padding: 5px;
+}
+.virtual-select.ui-select-container .ui-select-choices-row {
+  padding: 0.25rem 0.5rem;
+  line-height: 2;
+  cursor: default;
+}
+.virtual-select.ui-select-container .ui-select-choices-row:hover {
+  background-color: #f5f5f5;
 }
 .virtual-select.ui-select-container .virtual-scroll-list-item {
   white-space: nowrap !important;
   min-height: 30px;
 }
+.virtual-select.ui-select-container.ui-select-multiple .ui-select-match .ui-select-match-item {
+  outline: 0;
+  margin: 0 3px 3px 0;
+}
+.virtual-select.ui-select-container.ui-select-multiple .ui-select-match .close {
+  font-size: 1.6em;
+  line-height: 0.75;
+}
 .virtual-select.ui-select-container.ui-select-multiple.ui-select-bootstrap .virtual-select-list-container {
   display: block;
   top: 100%;
   margin-top: 0;
+  border-radius: 0;
+  padding: 0;
+}
+.virtual-select.ui-select-container.ui-select-multiple.ui-select-bootstrap .virtual-select-list-container .virtual-scroll-container {
+  overflow-anchor: none;
 }

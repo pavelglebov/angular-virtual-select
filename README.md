@@ -26,6 +26,12 @@ And finally add the module dependency in your AngularJS app (you can remove ui.b
 ```
 angular.module('myApp', ['angular-virtual-select']);
 ```
+## Usage
+
+```
+<virtual-select choices-repeat="list" ng-model="selected"></virtual-select>
+```
+*** "choices-repeat" and "ng-model" required for correct work
 
 ## Documentation
 
