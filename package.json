@@ -8,9 +8,11 @@
     "build": "webpack --config webpack.build.js"
   },
   "dependencies": {
+    "angular-ui-select": "*",
     "angular-vs-repeat": "1.1.7",
     "bootstrap": "*",
-    "angular-ui-select": "*",
+    "jquery": "^3.3.1",
+    "ui-select": "^0.19.8",
     "underscore": "*"
   },
   "devDependencies": {
