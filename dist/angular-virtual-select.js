@@ -116,7 +116,7 @@ __webpack_require__.r(__webpack_exports__);
 						</div>
 						<ul ng-if="opened && list.length" class="virtual-select-list-container ui-select-choices ui-select-choices-content ui-select-dropdown dropdown-menu">
 							<li class="virtual-scroll-container ui-select-choices-group" vs-repeat>
-								<div class="ui-select-choices-row" ng-repeat="choice in list | virtualSelectfilterSelected:choice:selected" ng-click="itemClick(choice)">
+								<div class="ui-select-choices-row" ng-repeat="choice in list | virtualSelectfilterSelected:choice:selected track by $index" ng-click="itemClick(choice)">
 									<a class="virtual-scroll-list-item ui-select-choices-row-inner"> <!-- ui-select layout -->
 										<span>
 											{{display(choice)}}
