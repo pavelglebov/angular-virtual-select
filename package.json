@@ -4,8 +4,8 @@
   "description": "Select with virtualization with bootstrap-like behavior",
   "main": "angular-virtual-select.js",
   "scripts": {
-    "start": "webpack-dev-server --open --config webpack.dev.js",
-    "build": "webpack"
+    "dev": "npm run build && webpack-dev-server --open --config webpack.dev.js",
+    "build": "webpack --config webpack.build.js"
   },
   "dependencies": {
     "angular-vs-repeat": "1.1.7",
@@ -20,6 +20,7 @@
     "css-loader": "^0.28.11",
     "csso-webpack-plugin": "^1.0.0-beta.12",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "html-webpack-plugin": "^3.2.0",
     "less": "2.7.3",
     "less-loader": "^4.1.0",
     "style-loader": "^0.21.0",
