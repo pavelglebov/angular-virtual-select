@@ -1,28 +1,34 @@
 # Angular-virtual-select
 
-Select with virtualization with bootstrap-like behavior
+Select with virtualization that imitates ui-select behavior and uses bootstrap styles
+
+Based on https://github.com/kamilkp/angular-vs-repeat
+
+<!-- ### Example
+
+#ToDo -->
 
 ### Installing
 
-Select has a few dependencies, these are as follows, and must be included before this libraries files:
+Dependencies:
 
 - [AngularJS 1.x](http://angularjs.org/ "Angular")
-- [Bootstrap 3+](http://getbootstrap.com/ "Bootstrap") (CSS only)
-- [Underscore](http://underscorejs.org/ "Underscore")
 - [Angular-vs-repeat](http://github.com/kamilkp/angular-vs-repeat "angular-vs-repeat")
+- [Bootstrap 3+](http://getbootstrap.com/ "Bootstrap") (**CSS only**)
+- [Underscore](http://underscorejs.org/ "Underscore")
 
-You can install through npm:
 ```
 npm install angular-virtual-select --save
 ```
 
 You will then need to include the JS and CSS files for the plugin:
 ```
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet"> (*Just example, Bootstrap version 3 is also OK*)
 <link href="node_modules/angular-virtual-select/dist/angular-virtual-select.min.css" rel="stylesheet">
 <script src="node_modules/angular-virtual-select/dist/angular-virtual-select.js.min.js"></script>
 ```
 
-And finally add the module dependency in your AngularJS app (you can remove ui.bootstrap if you don't want the extra dependency - it is only required for collapse animations and tooltips):
+Add the module dependency in your AngularJS app:
 ```
 angular.module('myApp', ['angular-virtual-select']);
 ```
@@ -31,11 +37,8 @@ angular.module('myApp', ['angular-virtual-select']);
 ```
 <virtual-select choices-repeat="list" ng-model="selected"></virtual-select>
 ```
-*** "choices-repeat" and "ng-model" required for correct work
-
-## Documentation
-
-#ToDo
+**choices-repeat** - *required* Pass an array of elements
+**ng-model** - *required* Array, result will be put here
 
 <!-- ### Break down into end to end tests -->
 
@@ -57,11 +60,9 @@ angular.module('myApp', ['angular-virtual-select']);
 
 <!-- Add additional notes about how to deploy this on a live system -->
 
-<!-- ## Built With -->
+## Built With
 
-<!-- * [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used -->
-<!-- * [Maven](https://maven.apache.org/) - Dependency Management -->
-<!-- * [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds -->
+* [Angular-virtual-select](https://github.com/kamilkp/angular-vs-repeat) - Virtualization for ng-repeat
 
 <!-- ## Contributing -->
 
