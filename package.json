@@ -11,7 +11,6 @@
     "angular-vs-repeat": "1.1.7",
     "bootstrap": "*",
     "angular-ui-select": "*",
-    "jquery": "*",
     "underscore": "*"
   },
   "devDependencies": {

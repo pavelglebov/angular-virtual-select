@@ -5,14 +5,14 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
 	mode: 'development',
 	entry: {
-		'app': './test/app.js',
 		'vendors': [
 			'./node_modules/jquery/dist/jquery.js',
 			'./node_modules/angular/angular.js',
 			'./node_modules/underscore/underscore.js',
 			'./node_modules/angular-vs-repeat/src/angular-vs-repeat.js'
 		],
-		'angular-virtual-select': './dist/angular-virtual-select.js'
+		'angular-virtual-select': './dist/angular-virtual-select.js',
+		'app': './test/app.js'
 	},
 	output: {
 		filename: '[name].js',
