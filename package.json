@@ -9,11 +9,11 @@
   },
   "dependencies": {
     "angular-vs-repeat": "2.0.9",
-    "bootstrap": "^4.1.1",
     "lodash": "^4.17.10"
   },
   "devDependencies": {
     "angular": "^1.6.10",
+    "bootstrap": "^4.1.1",
     "clean-webpack-plugin": "^0.1.19",
     "css-loader": "^0.28.11",
     "csso-webpack-plugin": "^1.0.0-beta.12",

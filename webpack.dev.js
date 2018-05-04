@@ -16,14 +16,13 @@ module.exports = {
 		'angular-virtual-select': './dist/angular-virtual-select.js',
 		'app': './test/app.js',
 		'styles': [
-			'./test/main.css',
 			'./node_modules/bootstrap/dist/css/bootstrap.css',
 			'./dist/angular-virtual-select.css'
 		]
 	},
 	output: {
-		filename: '[name].js',
-		path: path.resolve(__dirname, 'test/dist')
+		filename: 'test/dist/[name].js',
+		path: path.resolve(__dirname)
 	},
 	module: {
 		rules: [
@@ -49,7 +48,7 @@ module.exports = {
 			excludeAssets: [/styles.js/]
 		}),
 		new HtmlWebpackExcludeAssetsPlugin(),
-		new ExtractTextPlugin('select.css')
+		new ExtractTextPlugin('test/dist/select.css')
 	],
 	devtool: 'inline-source-map',
 	devServer: {

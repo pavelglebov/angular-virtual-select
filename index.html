@@ -2,8 +2,8 @@
 <html lang="en" ng-app="TestApp">
 <head>
 	<meta charset="UTF-8">
-	<title><%= htmlWebpackPlugin.options.title %></title>
-</head>
+	<title>Angular Virtual Select Test Page</title>
+<link href="test/dist/select.css" rel="stylesheet"></head>
 <body ng-controller="TestAppController as app">
 	Selected: 
 	<span style="margin-right: 10px" ng-repeat="item in app.selected">{{item}}</span>
@@ -15,5 +15,5 @@
 
 	<button ng-click="app.activate('first')">Activate 1</button>
 	<button ng-click="app.activate('second')">Activate 2</button>
-</body>
+<script type="text/javascript" src="test/dist/vendors.js"></script><script type="text/javascript" src="test/dist/angular-virtual-select.js"></script><script type="text/javascript" src="test/dist/app.js"></script></body>
 </html>

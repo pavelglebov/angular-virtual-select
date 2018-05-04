@@ -39,7 +39,7 @@ Include JS and CSS files:
 <!-- End of Angular-virtual-select -->
 ```
 
-Or you can use min file bundles with dependencies:
+Or you can use min file bundled with dependencies:
 ```html
 <script src="node_modules/angular-virtual-select/dist/angular-virtual-select-with-dependecies.min.js"></script>
 <link href="node_modules/angular-virtual-select/dist/angular-virtual-select.min.css" rel="stylesheet">
