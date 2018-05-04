@@ -300,7 +300,7 @@ __webpack_require__.r(__webpack_exports__);
 
 						if (scope.selected && scope.selected.length) {
 							if (scope.coreProperty) {
-								result = _.pluck(scope.selected, scope.coreProperty);
+								result = scope.selected.map(el => el[scope.coreProperty]);
 							}
 							else {
 								result = scope.selected;

@@ -3,6 +3,12 @@ angular.module('TestApp', ['angular-virtual-select'])
 		let listLength = 1000;
 		this.list = [];
 		for (let i = 0; i < listLength; i++) {
-			this.list.push('User_#' + Math.round(Math.random()*100000000));
+			let obj = {
+				label: 'User_#' + Math.round(Math.random()*100000000),
+				name: 'John' + Math.round(Math.random()*100000000),
+				age: Math.round(Math.random()*100)
+			};
+
+			this.list.push(obj);
 		}
 	});

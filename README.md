@@ -12,23 +12,33 @@ Based on https://github.com/kamilkp/angular-vs-repeat
 
 Dependencies:
 
-- [AngularJS 1.x](http://angularjs.org/ "Angular")
+- [AngularJS 1.x](http://angularjs.org "Angular")
+- [jQuery](http://jquery.com "jQuery")
 - [Angular-vs-repeat](http://github.com/kamilkp/angular-vs-repeat "angular-vs-repeat")
-- [Bootstrap 3+](http://getbootstrap.com/ "Bootstrap") (**CSS only**)
-- [Underscore](http://underscorejs.org/ "Underscore")
+- [Lodash](http://lodash.com "Lodash") (Underscore is also valid)
+- [Bootstrap 3+](http://getbootstrap.com "Bootstrap") (**CSS only**)
 
 ```
 npm install angular-virtual-select --save
 ```
 
-You will then need to include the JS and CSS files for the plugin:
+Include JS and CSS files:
 ```
-<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet"> (*Just example, Bootstrap version 3 is also OK*)
+<!-- Dependencies -->
+<script src="node_modules/angular/angular.js"></script>
+<script src="node_modules/jquery/dist/jquery.js"></script>
+<script src="node_modules/angular-vs-repeat/dist/angular-vs-repeat.js"></script>
+<script src="node_modules/lodash/lodash.js"></script>
+<link href="node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+<!-- End of Dependencies -->
+
+<!-- Angular-virtual-select -->
+<script src="node_modules/angular-virtual-select/dist/angular-virtual-select.min.js"></script>
 <link href="node_modules/angular-virtual-select/dist/angular-virtual-select.min.css" rel="stylesheet">
-<script src="node_modules/angular-virtual-select/dist/angular-virtual-select.js.min.js"></script>
+<!-- End of Angular-virtual-select -->
 ```
 
-Add the module dependency in your AngularJS app:
+Add module dependency to your AngularJS app:
 ```
 angular.module('myApp', ['angular-virtual-select']);
 ```
@@ -37,8 +47,8 @@ angular.module('myApp', ['angular-virtual-select']);
 ```
 <virtual-select choices-repeat="list" ng-model="selected"></virtual-select>
 ```
-**choices-repeat** - *required* Pass an array of elements
-**ng-model** - *required* Array, result will be put here
+- **choices-repeat** - *required* Pass an array of elements
+- **ng-model** - *required* Array, result will be put here
 
 <!-- ### Break down into end to end tests -->
 
@@ -62,7 +72,7 @@ angular.module('myApp', ['angular-virtual-select']);
 
 ## Built With
 
-* [Angular-virtual-select](https://github.com/kamilkp/angular-vs-repeat) - Virtualization for ng-repeat
+* [Angular-vs-repeat](https://github.com/kamilkp/angular-vs-repeat) - Virtualization for ng-repeat
 
 <!-- ## Contributing -->
 

@@ -1,6 +1,6 @@
 {
   "name": "angular-virtual-select",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Select with virtualization with bootstrap-like behavior",
   "main": "angular-virtual-select.js",
   "scripts": {
@@ -11,7 +11,7 @@
     "angular-vs-repeat": "2.0.9",
     "bootstrap": "^4.1.1",
     "jquery": "^3.3.1",
-    "underscore": "1.9.0"
+    "lodash": "^4.17.10"
   },
   "devDependencies": {
     "angular": "^1.6.10",

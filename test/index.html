@@ -7,8 +7,8 @@
 </head>
 <body ng-controller="TestAppController as app">
 	Selected: 
-	<span ng-repeat="item in selected">{{item}}</span>
+	<span style="margin-right: 10px" ng-repeat="item in selected">{{item}}</span>
 	<hr>
-	<virtual-select choices-repeat="app.list" ng-model="selected"></virtual-select>
+	<virtual-select choices-repeat="app.list" ng-model="selected" display-property="'label'" core-property="'name'"></virtual-select>
 </body>
 </html>

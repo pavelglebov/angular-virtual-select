@@ -11,7 +11,7 @@ module.exports = {
 		'vendors': [
 			'./node_modules/jquery/dist/jquery.js',
 			'./node_modules/angular/angular.js',
-			'./node_modules/underscore/underscore.js',
+			'./node_modules/lodash/lodash.js',
 			'./node_modules/angular-vs-repeat/dist/angular-vs-repeat.js'
 		],
 		'angular-virtual-select': './dist/angular-virtual-select.js',
@@ -42,8 +42,8 @@ module.exports = {
 			$: 'jquery',
 			jQuery: 'jquery',
 			'window.jQuery': 'jquery',
-			_: 'underscore',
-			'window._': 'underscore'
+			_: 'lodash',
+			'window._': 'lodash'
 		}),
 		new CleanWebpackPlugin(['./test/dist']),
 		new HtmlWebpackPlugin({

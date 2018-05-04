@@ -221,7 +221,7 @@ import "./angular-virtual-select.less";
 
 						if (scope.selected && scope.selected.length) {
 							if (scope.coreProperty) {
-								result = _.pluck(scope.selected, scope.coreProperty);
+								result = scope.selected.map(el => el[scope.coreProperty]);
 							}
 							else {
 								result = scope.selected;
