@@ -1,4 +1,6 @@
 .virtual-select {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
 	&.ui-select-container {
 		position: relative;
 		z-index: auto;
@@ -57,11 +59,28 @@
 				.ui-select-match-item {
 					outline: 0;
 					margin: 0 3px 3px 0;
+
+					// basic fallback if no boostrap styles provided
+					display: inline-block;
+					cursor: pointer;
+					border-radius: 0.2rem;
+					user-select: none;
+					padding: 0.25rem 0.5rem;
+					border: 1px solid #00000052;
+					color: #fff;
+					background-color: #007bff;
 				}
 
 				.close {
 					font-size: 1.6em;
 					line-height: 0.75;
+
+					// basic fallback if no boostrap styles provided
+					float: right;
+					font-weight: 700;
+					opacity: .5;
+					color: #000;
+					text-shadow: 0 1px 0 #fff;
 				}
 			}
 		}
@@ -72,9 +91,14 @@
 	display: block;
 	top: 100%;
 	margin-top: 0;
-
 	border-radius: 0;
 	padding: 0;
+
+	// basic fallback if no boostrap styles provided
+	position: absolute;
+	background-color: #fff;
+	z-index: 1000;
+	border: 1px solid rgba(0, 0, 0, 0.15);
 
 	.virtual-scroll-container {
 		overflow-anchor: none; // https://github.com/kamilkp/angular-vs-repeat/issues/156
