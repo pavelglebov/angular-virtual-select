@@ -17,7 +17,9 @@ module.exports = {
 		'app': './test/app.js',
 		'styles': [
 			'./node_modules/bootstrap/dist/css/bootstrap.css',
-			'./dist/angular-virtual-select.css'
+			'./node_modules/ui-select/dist/select.css',
+			'./dist/angular-virtual-select.css',
+			'./test/main.css',
 		]
 	},
 	output: {

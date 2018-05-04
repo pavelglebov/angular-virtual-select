@@ -3,17 +3,49 @@
 <head>
 	<meta charset="UTF-8">
 	<title><%= htmlWebpackPlugin.options.title %></title>
+	<script srsc="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-sanitize.js"></script>
 </head>
 <body ng-controller="TestAppController as app">
-	Selected: 
-	<span style="margin-right: 10px" ng-repeat="item in app.selected">{{item}}</span>
-	<hr>
-	<virtual-select choices-repeat="app.list" ng-model="app.selected" display-property="'label'" placeholder="'Select a User'" limit="10" multiselect filter-by="{byAge: 18}" select-name="'first'"></virtual-select>
+	<h1><a href="https://github.com/pavelglebov/angular-virtual-select">Angular-virtual-select</a></h1>
+	<h3><small>Select with virtualization that imitates ui-select behavior and uses bootstrap styles</small></h3>
 
-	Second:
-	<virtual-select choices-repeat="app.list" ng-model="app.selected" display-property="'label'" placeholder="'Select a User'" limit="10" multiselect select-name="'second'"></virtual-select>
+	<div class="content">
+		<h4>Performance comparison</h4>
+		<hr>
 
-	<button ng-click="app.activate('first')">Activate 1</button>
-	<button ng-click="app.activate('second')">Activate 2</button>
+		<div class="input-group array-size-group">
+			<div class="input-group-prepend">
+				<button class="btn btn-outline-info" type="button" ng-click="app.changeArraySize(app.listLength)">Change array size</button>
+			</div>
+			<input type="text" class="form-control" id="inlineFormInputGroupArraySize" placeholder="{{app.listLength}}" ng-model="app.listLength">
+		</div>
+
+		<div class="flex-row">
+			<div class="flex-col flex-1">
+				<h6>Angular-virtual-select</h6>
+
+				<virtual-select choices-repeat="app.list" ng-model="app.selected" display-property="'label'" placeholder="'Select user'"></virtual-select>
+			</div>
+			<div class="flex-col flex-1">
+				<h6>Ui-select</h6>
+
+				<ui-select multiple ng-model="app.selected2" theme="bootstrap" close-on-select="false">
+					<ui-select-match placeholder="Select user">{{$item.label}}</ui-select-match>
+					<ui-select-choices repeat="person as person in app.list | propsFilter: {label: $select.search, age: $select.search} track by $index">
+						<div ng-bind-html="trustAsHtml(person.name)"></div>
+						<small>
+							{{person.label}}
+						</small>
+					</ui-select-choices>
+				</ui-select>
+			</div>
+			<div class="flex-col flex-1 native-select">
+				<h6>Html select</h6>
+
+				<select ng-options="item as item.label for item in app.list track by $index" ng-model="app.selected3"></select>
+			</div>
+		</div>
+	</div>
+
 </body>
 </html>

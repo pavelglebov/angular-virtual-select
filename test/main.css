@@ -1,0 +1,72 @@
+html {
+	height: 100%;
+}
+
+body {
+	padding: 40px 80px;
+	color: #45484a;
+	background: #e2e2e21a;
+}
+
+h1 a {
+	color: #45484a;
+}
+
+h1 a:hover {
+	color: #45484a;
+}
+
+.content {
+	margin-top: 80px;
+}
+
+.flex-row {
+	display: flex;
+	flex-direction: row;
+}
+
+.flex-col {
+	display: flex;
+	flex-direction: column;
+	text-indent: 20px;
+}
+
+.flex-col:not(:last-child) {
+	margin-right: 20px;
+}
+
+.flex-col h6 {
+	margin-bottom: 20px;
+}
+
+.flex-1 {
+	flex: 1;
+}
+
+.array-size-group {
+	width: 35%;
+	margin: 20px 0 40px 0;
+}
+
+.virtual-select {
+	max-height: 25vh;
+}
+
+.ui-select-choices {
+	display: block;
+}
+
+.ui-select-container {
+	min-height: 45px !important;
+	line-height: 36px;
+}
+
+.ui-select-container > div:first-child {
+	max-height: 25vh;
+	overflow: auto;
+}
+
+.native-select select {
+	height: 45px;
+	border-color: rgba(0, 0, 0, 0.15);
+}
