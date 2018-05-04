@@ -526,6 +526,10 @@ h1 a:hover {
 .native-select select {
 	height: 45px;
 	border-color: rgba(0, 0, 0, 0.15);
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
 }/*!
  * Bootstrap v4.1.1 (https://getbootstrap.com/)
  * Copyright 2011-2018 The Bootstrap Authors
