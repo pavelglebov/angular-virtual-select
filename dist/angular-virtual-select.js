@@ -90,17 +90,17 @@ __webpack_require__.r(__webpack_exports__);
 				scope: {
 					ngModel: '=',
 					choicesRepeat: '=',
-					filterBy: '=',
+					filterBy: '=', // not done
 					placeholder: '=',
 					displayProperty: '=',
 					coreProperty: '=',
 					singleselect: '=',
 					multiselect: '=',
 					limit: '=',
-					onInputChange: '&',
+					onInputChange: '&', // not done 
 					dynamicChoices: '=',
 					allowCustom: '=',
-					selectName: '=',
+					selectName: '=', // not done
 					localizeDisplayProperty: '=',
 					blockModelUpdate: '='
 				},
@@ -162,7 +162,8 @@ __webpack_require__.r(__webpack_exports__);
 					var applyFilters = function () {
 						if (scope.filterBy) {
 							var haveSomeFilters = _.some(scope.filterBy, function (val) {
-								return !_.isEmpty(val);
+								// return !_.isEmpty(val);
+								return !_.isUndefined(val);
 							});
 
 							var newVal;
@@ -179,6 +180,7 @@ __webpack_require__.r(__webpack_exports__);
 
 							if (haveSomeFilters) {
 								scope.list = newVal;
+								initialList = scope.list;
 							}
 						}
 					};

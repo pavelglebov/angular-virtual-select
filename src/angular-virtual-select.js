@@ -83,7 +83,7 @@ import "./angular-virtual-select.less";
 					var applyFilters = function () {
 						if (scope.filterBy) {
 							var haveSomeFilters = _.some(scope.filterBy, function (val) {
-								return !_.isEmpty(val);
+								return !_.isUndefined(val);
 							});
 
 							var newVal;
@@ -100,6 +100,7 @@ import "./angular-virtual-select.less";
 
 							if (haveSomeFilters) {
 								scope.list = newVal;
+								initialList = scope.list;
 							}
 						}
 					};

@@ -10,7 +10,7 @@ Based on https://github.com/kamilkp/angular-vs-repeat
 
 #ToDo -->
 
-### Installing
+## Installing
 
 Dependencies:
 
@@ -25,7 +25,7 @@ npm install angular-virtual-select --save
 ```
 
 Include JS and CSS files:
-```
+```html
 <!-- Dependencies -->
 <script src="node_modules/angular/angular.js"></script>
 <script src="node_modules/jquery/dist/jquery.js"></script>
@@ -46,11 +46,34 @@ angular.module('myApp', ['angular-virtual-select']);
 ```
 ## Usage
 
+```html
+<virtual-select choices-repeat="myApp.list" ng-model="myApp.selected"></virtual-select>
 ```
-<virtual-select choices-repeat="list" ng-model="selected"></virtual-select>
-```
-- **choices-repeat** - *required* Pass an array of elements
-- **ng-model** - *required* Array, result will be put here
+
+### Options
+
+##### Required Options:
+
+- `choices-repeat` - Array: Pass an array of options
+- `ng-model` - Array: Rresult will be put here
+
+##### Additional Options:
+
+- `placeholder` - String: Placeholder `... placeholder="'Select a User'" ...`
+- `display-property` - String: In case you pass array of objects, and want to display on UI a particular field `... display-property="'label'" ...`
+- `core-property` - String: In case you pass array of objects, and want to pass to ng-model a particular field `... core-property="'name'" ...`
+- `singleselect` - Attribute: Only one option can be selected. If `singleselect` is not passed, select defaults to multiselect `... singleselect>`
+- `multiselect` - Attribute: Enables multiselect, is default `... multiselect>`
+- `limit` - Number: Limit of selected options `... limit="3" ...`
+- `filterBy` - Object: Provide a set of filters which will be applied on input list. E.g. `filter-by="{byAge: 18}"`
+- `selectName` - String: Used with Events described below `... select-name="'firstVsSelect'" ...`
+
+##### Events:
+
+- `virtualScrollActivate` - Event: Triggers particular select opening. Broadcasted from parent.
+- `vsSpecificOpenStateChange` - Event: Tells parent that select open state was changed. Emmitted from virtual-select.
+
+Events could be used to decorate virtual-select into bigger component.
 
 <!-- ### Break down into end to end tests -->
 

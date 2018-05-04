@@ -7,8 +7,14 @@
 </head>
 <body ng-controller="TestAppController as app">
 	Selected: 
-	<span style="margin-right: 10px" ng-repeat="item in selected">{{item}}</span>
+	<span style="margin-right: 10px" ng-repeat="item in app.selected">{{item}}</span>
 	<hr>
-	<virtual-select choices-repeat="app.list" ng-model="selected" display-property="'label'"></virtual-select>
+	<virtual-select choices-repeat="app.list" ng-model="app.selected" display-property="'label'" placeholder="'Select a User'" limit="10" multiselect filter-by="{byAge: 18}" on-input-change="app.cb()" select-name="'first'"></virtual-select>
+
+	Second:
+	<virtual-select choices-repeat="app.list" ng-model="app.selected" display-property="'label'" placeholder="'Select a User'" limit="10" multiselect select-name="'second'"></virtual-select>
+
+	<button ng-click="app.activate('first')">Activate 1</button>
+	<button ng-click="app.activate('second')">Activate 2</button>
 </body>
 </html>
