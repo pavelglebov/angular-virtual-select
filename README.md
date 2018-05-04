@@ -75,6 +75,10 @@ angular.module('myApp', ['angular-virtual-select']);
 
 Events could be used to decorate virtual-select into bigger component.
 
+```html
+<virtual-select choices-repeat="myApp.list" ng-model="myApp.selected" display-property="'label'" placeholder="'Select a User'" limit="10" multiselect filter-by="{byAge: 18}" select-name="'firstVsSelect'"></virtual-select>
+```
+
 <!-- ### Break down into end to end tests -->
 
 <!-- Explain what these tests test and why -->
