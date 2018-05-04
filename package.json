@@ -1,7 +1,7 @@
 {
   "name": "angular-virtual-select",
   "version": "1.1.1",
-  "description": "Select with virtualization with bootstrap-like behavior",
+  "description": "Select with virtualization that imitates ui-select behavior and uses bootstrap styles",
   "main": "angular-virtual-select.js",
   "scripts": {
     "dev": "npm run build && webpack-dev-server --open --config webpack.dev.js",
@@ -10,7 +10,6 @@
   "dependencies": {
     "angular-vs-repeat": "2.0.9",
     "bootstrap": "^4.1.1",
-    "jquery": "^3.3.1",
     "lodash": "^4.17.10"
   },
   "devDependencies": {
@@ -29,14 +28,22 @@
     "webpack-cli": "^2.1.2",
     "webpack-dev-server": "^3.1.4"
   },
+  "author": {
+    "name": "Pavel Glebov",
+    "email": "pg.incloud@gmail.com"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/pavelglebov/angular-virtual-select.git"
   },
-  "author": "Pavel Glebov",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/pavelglebov/angular-virtual-select/issues"
   },
-  "homepage": "https://github.com/pavelglebov/angular-virtual-select#readme"
+  "homepage": "https://github.com/pavelglebov/angular-virtual-select#readme",
+  "keywords": [
+    "angular",
+    "angular-virtual-select",
+    "virtual select"
+  ]
 }

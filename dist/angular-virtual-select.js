@@ -79,7 +79,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_virtual_select_less__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_angular_virtual_select_less__WEBPACK_IMPORTED_MODULE_0__);
 
 
-(function(window, angular, $, _) {
+(function(window, angular, _) {
 	'use strict';
 
 	var virtualSelectModule = angular.module('angular-virtual-select', ['vs-repeat'])
@@ -90,17 +90,17 @@ __webpack_require__.r(__webpack_exports__);
 				scope: {
 					ngModel: '=',
 					choicesRepeat: '=',
-					filterBy: '=', // not done
+					filterBy: '=',
 					placeholder: '=',
 					displayProperty: '=',
 					coreProperty: '=',
 					singleselect: '=',
 					multiselect: '=',
 					limit: '=',
-					onInputChange: '&', // not done 
+					onInputChange: '&',
 					dynamicChoices: '=',
 					allowCustom: '=',
-					selectName: '=', // not done
+					selectName: '=',
 					localizeDisplayProperty: '=',
 					blockModelUpdate: '='
 				},
@@ -162,7 +162,6 @@ __webpack_require__.r(__webpack_exports__);
 					var applyFilters = function () {
 						if (scope.filterBy) {
 							var haveSomeFilters = _.some(scope.filterBy, function (val) {
-								// return !_.isEmpty(val);
 								return !_.isUndefined(val);
 							});
 
@@ -397,7 +396,7 @@ __webpack_require__.r(__webpack_exports__);
 					};
 
 					var onDocumentClick = function (event) {
-						if (!$(event.target).closest(element[0]).length) {
+						if (!element[0].contains(event.target)) {
 							disposeElement();
 						}
 					};
@@ -458,7 +457,11 @@ __webpack_require__.r(__webpack_exports__);
 							}
 						}
 
-						$('.virtual-scroll-container').scrollTop(0); // fix issue with vs-repeat scroll
+						let scrollContainer = document.getElementsByClassName('virtual-scroll-container') && document.getElementsByClassName('virtual-scroll-container')[0];
+						if (scrollContainer) {
+							scrollContainer.scrollTo(0, 0); // fix issue with vs-repeat scroll
+						}
+
 						$timeout(function () {
 							scope.$digest();
 						}, 0);
@@ -495,7 +498,7 @@ __webpack_require__.r(__webpack_exports__);
 			};
 		});
 
-})(window, window.angular, window.jQuery, window._);
+})(window, window.angular, window._);
 
 /***/ }),
 /* 1 */

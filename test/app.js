@@ -1,3 +1,5 @@
+import filter from 'lodash/filter';
+
 angular.module('TestApp', ['angular-virtual-select'])
 	.controller('TestAppController', function($scope) {
 		let listLength = 1000;
@@ -26,7 +28,7 @@ angular.module('TestApp', ['angular-virtual-select'])
 	})
 	.filter('byAge', function() {
 		return function(items, limit) {
-			let filtered = _.filter(items, function(item) {
+			let filtered = filter(items, function(item) {
 				return item.age <= limit;
 			});
 			return filtered;

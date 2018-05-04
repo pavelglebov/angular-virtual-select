@@ -1,6 +1,6 @@
-import "./angular-virtual-select.less";
+import './angular-virtual-select.less';
 
-(function(window, angular, $, _) {
+(function(window, angular, _) {
 	'use strict';
 
 	var virtualSelectModule = angular.module('angular-virtual-select', ['vs-repeat'])
@@ -317,7 +317,7 @@ import "./angular-virtual-select.less";
 					};
 
 					var onDocumentClick = function (event) {
-						if (!$(event.target).closest(element[0]).length) {
+						if (!element[0].contains(event.target)) {
 							disposeElement();
 						}
 					};
@@ -378,7 +378,11 @@ import "./angular-virtual-select.less";
 							}
 						}
 
-						$('.virtual-scroll-container').scrollTop(0); // fix issue with vs-repeat scroll
+						let scrollContainer = document.getElementsByClassName('virtual-scroll-container') && document.getElementsByClassName('virtual-scroll-container')[0];
+						if (scrollContainer) {
+							scrollContainer.scrollTo(0, 0); // fix issue with vs-repeat scroll
+						}
+
 						$timeout(function () {
 							scope.$digest();
 						}, 0);
@@ -415,4 +419,4 @@ import "./angular-virtual-select.less";
 			};
 		});
 
-})(window, window.angular, window.jQuery, window._);
+})(window, window.angular, window._);

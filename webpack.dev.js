@@ -9,7 +9,6 @@ module.exports = {
 	mode: 'development',
 	entry: {
 		'vendors': [
-			'./node_modules/jquery/dist/jquery.js',
 			'./node_modules/angular/angular.js',
 			'./node_modules/lodash/lodash.js',
 			'./node_modules/angular-vs-repeat/dist/angular-vs-repeat.js'
@@ -39,9 +38,6 @@ module.exports = {
 	},
 	plugins: [
 		new webpack.ProvidePlugin({
-			$: 'jquery',
-			jQuery: 'jquery',
-			'window.jQuery': 'jquery',
 			_: 'lodash',
 			'window._': 'lodash'
 		}),

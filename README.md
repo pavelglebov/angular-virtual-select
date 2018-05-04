@@ -15,7 +15,6 @@ Based on https://github.com/kamilkp/angular-vs-repeat
 Dependencies:
 
 - [AngularJS 1.x](http://angularjs.org "Angular")
-- [jQuery](http://jquery.com "jQuery")
 - [Angular-vs-repeat](http://github.com/kamilkp/angular-vs-repeat "angular-vs-repeat")
 - [Lodash](http://lodash.com "Lodash") (Underscore is also valid)
 - [Bootstrap 3+](http://getbootstrap.com "Bootstrap") (**CSS only**)
@@ -28,7 +27,6 @@ Include JS and CSS files:
 ```html
 <!-- Dependencies -->
 <script src="node_modules/angular/angular.js"></script>
-<script src="node_modules/jquery/dist/jquery.js"></script>
 <script src="node_modules/angular-vs-repeat/dist/angular-vs-repeat.js"></script>
 <script src="node_modules/lodash/lodash.js"></script>
 <link href="node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
