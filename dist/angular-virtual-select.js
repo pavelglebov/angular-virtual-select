@@ -82,7 +82,7 @@ __webpack_require__.r(__webpack_exports__);
 (function(window, angular, _) {
 	'use strict';
 
-	var virtualSelectModule = angular.module('angular-virtual-select', ['vs-repeat'])
+	let virtualSelectModule = angular.module('angular-virtual-select', ['vs-repeat'])
 		.directive('virtualSelect', ['$filter', '$document', '$timeout', function($filter, $document, $timeout) {
 			return {
 				restrict: 'AE',
@@ -127,15 +127,15 @@ __webpack_require__.r(__webpack_exports__);
 						</ul>
 					</div>`,
 				link: function (scope, element, attrs) {
-					var singleselect = attrs.singleselect != null;
-					var multiselect = attrs.multiselect != null;
-					var dynamicChoices = attrs.dynamicChoices != null;
-					var allowCustom = attrs.allowCustom != null;
+					let singleselect = attrs.singleselect != null;
+					let multiselect = attrs.multiselect != null;
+					let dynamicChoices = attrs.dynamicChoices != null;
+					let allowCustom = attrs.allowCustom != null;
 
-					var inputChangeFunctionProvided = attrs.onInputChange;
+					let inputChangeFunctionProvided = attrs.onInputChange;
 
-					var jsonsify = function (target) {
-						var jsonsified = target;
+					let jsonsify = function (target) {
+						let jsonsified = target;
 
 						if (target && typeof target == 'object') {
 							jsonsified = JSON.parse(angular.toJson(jsonsified));
@@ -148,9 +148,9 @@ __webpack_require__.r(__webpack_exports__);
 						multiselect = true;
 					}
 
-					var initialList;
+					let initialList;
 
-					var initialize = function () {
+					let initialize = function () {
 						initialList = angular.copy(scope.choicesRepeat);
 						initialList = jsonsify(initialList);
 
@@ -159,13 +159,13 @@ __webpack_require__.r(__webpack_exports__);
 
 					initialize();
 
-					var applyFilters = function () {
+					let applyFilters = function () {
 						if (scope.filterBy) {
-							var haveSomeFilters = _.some(scope.filterBy, function (val) {
+							let haveSomeFilters = _.some(scope.filterBy, function (val) {
 								return !_.isUndefined(val);
 							});
 
-							var newVal;
+							let newVal;
 
 							if (haveSomeFilters) {
 								newVal = angular.copy(initialList);
@@ -196,10 +196,10 @@ __webpack_require__.r(__webpack_exports__);
 						}
 					}, true);
 
-					var restoreSelectedValues = function () {
+					let restoreSelectedValues = function () {
 						if (typeof scope.selected != 'undefined') {
-							var newSelected = [];
-							var foundOne = false;
+							let newSelected = [];
+							let foundOne = false;
 
 							_.each(scope.selected, function (value) {
 
@@ -232,12 +232,12 @@ __webpack_require__.r(__webpack_exports__);
 						}
 					}, true);
 
-					var convert = function (model) {
-						var result = [];
+					let convert = function (model) {
+						let result = [];
 
 						if (typeof model != 'object') {
-							var candidate = _.find(initialList, function (item) {
-								var target = scope.coreProperty ? item[scope.coreProperty] : item;
+							let candidate = _.find(initialList, function (item) {
+								let target = scope.coreProperty ? item[scope.coreProperty] : item;
 								if (typeof target == 'object') {
 									target = jsonsify(target);
 								}
@@ -249,8 +249,8 @@ __webpack_require__.r(__webpack_exports__);
 						}
 						else if (typeof model == 'object') {
 							_.each(model, function (value) {
-								var candidate = _.find(initialList, function (item) {
-									var target = scope.coreProperty ? item[scope.coreProperty] : item;
+								let candidate = _.find(initialList, function (item) {
+									let target = scope.coreProperty ? item[scope.coreProperty] : item;
 									if (typeof target == 'object') {
 										target = jsonsify(target);
 									}
@@ -265,8 +265,8 @@ __webpack_require__.r(__webpack_exports__);
 						return result;
 					};
 
-					var convertDynamic = function (model) {
-						var result = [];
+					let convertDynamic = function (model) {
+						let result = [];
 
 						if (typeof model == 'string') {
 							result.push(model);
@@ -282,7 +282,7 @@ __webpack_require__.r(__webpack_exports__);
 
 					scope.display = function (item) {
 						if (item != null) {
-							var result = item;
+							let result = item;
 
 							if (scope.displayProperty) {
 								result = item[scope.displayProperty];
@@ -296,8 +296,8 @@ __webpack_require__.r(__webpack_exports__);
 						return null;
 					};
 
-					var updateModel = function () {
-						var result = null;
+					let updateModel = function () {
+						let result = null;
 
 						if (scope.selected && scope.selected.length) {
 							if (scope.coreProperty) {
@@ -343,7 +343,7 @@ __webpack_require__.r(__webpack_exports__);
 
 					scope.itemClick = function (choice) {
 
-						var alreadySelected = _.find(scope.selected, function (item) {
+						let alreadySelected = _.find(scope.selected, function (item) {
 							return _.isEqual(item, choice);
 						});
 
@@ -371,7 +371,7 @@ __webpack_require__.r(__webpack_exports__);
 
 					scope.removeItem = function (choice) {
 
-						var ind = scope.selected && scope.selected.indexOf(choice);
+						let ind = scope.selected && scope.selected.indexOf(choice);
 
 						if (ind > -1) {
 							scope.selected.splice(ind, 1);
@@ -383,7 +383,7 @@ __webpack_require__.r(__webpack_exports__);
 						}
 					};
 
-					var disposeElement = function () {
+					let disposeElement = function () {
 						scope.opened = false;
 
 						if (!allowCustom || (scope.selected && scope.selected.length)) {
@@ -395,7 +395,7 @@ __webpack_require__.r(__webpack_exports__);
 						}, 0);
 					};
 
-					var onDocumentClick = function (event) {
+					let onDocumentClick = function (event) {
 						if (!element[0].contains(event.target)) {
 							disposeElement();
 						}
@@ -434,14 +434,14 @@ __webpack_require__.r(__webpack_exports__);
 						filterBySearchText(newVal, oldVal);
 					});
 
-					var filterBySearchText = function (newVal, oldVal) {
+					let filterBySearchText = function (newVal, oldVal) {
 						if (inputChangeFunctionProvided) {
 							scope.onInputChange({text: newVal});
 						}
 						else if (newVal) {
 							if (newVal != oldVal) {
 								scope.list = _.filter(initialList, function (item) {
-									var target = scope.displayProperty ? item[scope.displayProperty] : item;
+									let target = scope.displayProperty ? item[scope.displayProperty] : item;
 
 									return target && target.toLowerCase().indexOf(newVal.toLowerCase()) != -1;
 								});
@@ -479,21 +479,7 @@ __webpack_require__.r(__webpack_exports__);
 					return items;
 				}
 				else {
-					var filtered = [];
-
-					_.each(items, function (item) {
-						var ind = selected.indexOf(item);
-
-						var foundOne = _.find(selected, function (candidate) {
-							return _.isEqual(candidate, item);
-						});
-
-						if (ind == -1 && !foundOne) {
-							filtered.push(item);
-						}
-					});
-
-					return filtered;
+					return _.difference(items, selected);
 				}
 			};
 		});

@@ -23,6 +23,7 @@ h1 a:hover {
 .flex-row {
 	display: flex;
 	flex-direction: row;
+	margin: 20px 0;
 }
 
 .flex-col {
@@ -44,24 +45,36 @@ h1 a:hover {
 }
 
 .array-size-group {
-	width: 35%;
 	margin: 20px 0 40px 0;
+}
+
+.input-group button {
+	padding-left: 70px;
+	padding-right: 70px;
+}
+
+.input-group button:nth-child(1) {
+	/*background-color: #dc3545d1;*/
+}
+
+.input-group button:nth-child(2) {
+	/*background-color: #dc3545eb;*/
 }
 
 .virtual-select {
 	max-height: 25vh;
 }
 
-.ui-select-choices {
+.content .ui-select-choices {
 	display: block;
 }
 
-.ui-select-container {
-	min-height: 45px !important;
+.content .ui-select-container {
+	min-height: 45px;
 	line-height: 36px;
 }
 
-.ui-select-container > div:first-child {
+.content .ui-select-container > div:first-child {
 	max-height: 25vh;
 	overflow: auto;
 }

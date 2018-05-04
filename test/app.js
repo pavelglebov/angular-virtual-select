@@ -3,7 +3,7 @@ import 'ui-select';
 
 angular.module('TestApp', ['angular-virtual-select', 'ui.select'])
 	.controller('TestAppController', function($scope) {
-		this.listLength = 20000;
+		this.listLength = 5000;
 
 		this.composeList = function(size) {
 			size = size || this.listLength;
@@ -26,6 +26,7 @@ angular.module('TestApp', ['angular-virtual-select', 'ui.select'])
 		};
 
 		this.changeArraySize = function(size) {
+			this.listLength = size;
 			this.selected = null;
 			this.selected2 = null;
 			this.selected3 = null;

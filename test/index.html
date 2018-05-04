@@ -13,11 +13,18 @@
 		<h4>Performance comparison</h4>
 		<hr>
 
-		<div class="input-group array-size-group">
-			<div class="input-group-prepend">
-				<button class="btn btn-outline-info" type="button" ng-click="app.changeArraySize(app.listLength)">Change array size</button>
+		<div class="array-size-group">
+			<div class="input-group">
+				<div class="input-group-prepend">
+					<div class="input-group-text" id="btnGroupAddon">Change input array size:</div>
+				</div>
+
+				<div class="btn-group mr-2" role="group" aria-label="First group">
+					<button type="button" class="btn btn-outline-danger" ng-class="{'active': app.listLength == 1000}" ng-click="app.changeArraySize(1000)">1000</button>
+					<button type="button" class="btn btn-outline-danger" ng-class="{'active': app.listLength == 5000}" ng-click="app.changeArraySize(5000)">5000</button>
+					<button type="button" class="btn btn-outline-danger" ng-class="{'active': app.listLength == 20000}" ng-click="app.changeArraySize(20000)">20000</button>
+				</div>
 			</div>
-			<input type="text" class="form-control" id="inlineFormInputGroupArraySize" placeholder="{{app.listLength}}" ng-model="app.listLength">
 		</div>
 
 		<div class="flex-row">
@@ -44,6 +51,10 @@
 
 				<select ng-options="item as item.label for item in app.list track by $index" ng-model="app.selected3"></select>
 			</div>
+		</div>
+
+		<div class="flex-row">
+			<span>*Also compare search performance</span>
 		</div>
 	</div>
 
