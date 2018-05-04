@@ -9,7 +9,7 @@
 	Selected: 
 	<span style="margin-right: 10px" ng-repeat="item in app.selected">{{item}}</span>
 	<hr>
-	<virtual-select choices-repeat="app.list" ng-model="app.selected" display-property="'label'" placeholder="'Select a User'" limit="10" multiselect filter-by="{byAge: 18}" on-input-change="app.cb()" select-name="'first'"></virtual-select>
+	<virtual-select choices-repeat="app.list" ng-model="app.selected" display-property="'label'" placeholder="'Select a User'" limit="10" multiselect filter-by="{byAge: 18}" select-name="'first'"></virtual-select>
 
 	Second:
 	<virtual-select choices-repeat="app.list" ng-model="app.selected" display-property="'label'" placeholder="'Select a User'" limit="10" multiselect select-name="'second'"></virtual-select>

@@ -14,10 +14,11 @@ Based on https://github.com/kamilkp/angular-vs-repeat
 
 Dependencies:
 
-- [AngularJS 1.x](http://angularjs.org "Angular")
 - [Angular-vs-repeat](http://github.com/kamilkp/angular-vs-repeat "angular-vs-repeat")
 - [Lodash](http://lodash.com "Lodash") (Underscore is also valid)
-- [Bootstrap 3+](http://getbootstrap.com "Bootstrap") (**CSS only**)
+
+You can also add Bootstrap.css styles that will override angular-virtual-select basic styles
+- [Bootstrap 3+](http://getbootstrap.com "Bootstrap") (CSS only)
 
 ```
 npm install angular-virtual-select --save
@@ -36,6 +37,12 @@ Include JS and CSS files:
 <script src="node_modules/angular-virtual-select/dist/angular-virtual-select.min.js"></script>
 <link href="node_modules/angular-virtual-select/dist/angular-virtual-select.min.css" rel="stylesheet">
 <!-- End of Angular-virtual-select -->
+```
+
+Or you can use min file bundles with dependencies:
+```html
+<script src="node_modules/angular-virtual-select/dist/angular-virtual-select-with-dependecies.min.js"></script>
+<link href="node_modules/angular-virtual-select/dist/angular-virtual-select.min.css" rel="stylesheet">
 ```
 
 Add module dependency to your AngularJS app:

@@ -1,6 +1,6 @@
 {
   "name": "angular-virtual-select",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Select with virtualization that imitates ui-select behavior and uses bootstrap styles",
   "main": "angular-virtual-select.js",
   "scripts": {
