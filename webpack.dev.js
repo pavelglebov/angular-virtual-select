@@ -42,7 +42,7 @@ module.exports = {
 			_: 'lodash',
 			'window._': 'lodash'
 		}),
-		new CleanWebpackPlugin(['./test/dist']),
+		// new CleanWebpackPlugin(['./test/dist']),
 		new HtmlWebpackPlugin({
 			title: 'Angular Virtual Select Test Page',
 			filename: 'index.html',

@@ -1,11 +1,12 @@
 {
   "name": "angular-virtual-select",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "description": "Select with virtualization that imitates ui-select behavior and uses bootstrap styles",
   "main": "angular-virtual-select.js",
   "scripts": {
     "dev": "npm run build && webpack-dev-server --open --config webpack.dev.js",
-    "build": "webpack --config webpack.build.js"
+    "build": "webpack --config webpack.build.js",
+    "utp": "webpack --config webpack.dev.js"
   },
   "dependencies": {
     "angular-vs-repeat": "2.0.9",

@@ -4,11 +4,7 @@ Select with virtualization that imitates ui-select behavior and uses bootstrap s
 
 ![](https://github.com/pavelglebov/angular-virtual-select/blob/master/example.gif)
 
-Based on https://github.com/kamilkp/angular-vs-repeat
-
-<!-- ### Example
-
-#ToDo -->
+**Demo:** https://pavelglebov.github.io/angular-virtual-select/
 
 ## Installing
 
